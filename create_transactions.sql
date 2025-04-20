@@ -1,5 +1,5 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS transactions_v2
-(transaction_id BIGINT, user_id BIGINT, amount decimal, currency STRING, transaction_date TIMESTAMP, is_fraud boolean)
+(transaction_id BIGINT, user_id BIGINT, amount decimal, currency STRING, transaction_date TIMESTAMP, is_fraud INT)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 LOCATION 's3a://brostin.base/transactions_v2'
